@@ -1,0 +1,109 @@
+/*CSS Reset*/
+body, header, main, nav, img, footer {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F6E9E3;
+}
+
+img, video {
+   max-width: 100%;
+   display: block;
+}
+
+header img {
+    width: 100%;
+}
+
+nav {
+    background-color: #86765E;
+}
+
+
+nav ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+}
+
+
+nav li {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: arial;
+    font-weight: bold;
+    padding: .25em .75em;
+}
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-family: "Schibsted Grotesk", sans-serif;
+    color: black;
+}
+
+nav li:hover {
+    background: #CCAC7DFF;
+    transform: scale(1.12);
+    font-style: italic;
+}
+
+/*Style Rules for footer*/
+
+
+
+footer {
+    text-align: center;
+    font-size: 1em;
+    background-color: #86765E;
+    width: 100%;
+    height: 15%;
+    /*May need to remove, Chose to kept the footer fixed at the bottom of the page in case one of the webpages does not have enough content to fill the body and causes a gap after the footer*/
+    /*position: fixed;
+    bottom: 0;*/
+    /*Tablet and above*/
+    overflow: auto;
+}
+
+footer a, footer p{
+    font-family: "Century Gothic", sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer img {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+}
+
+.home-content {
+    font-family: Corbel, Georgia, Times, "Times New Roman", serif;
+    font-size: 1.5em;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 10px;
+}
+
+.welcome-information {
+    box-sizing: border-box;
+    text-align: left;
+    grid-column: 1;
+    padding: 0 2em;
+}
+
+.extra-information {
+    text-align: right;
+    padding: 0 2em 0 0;
+    box-sizing: border-box;
+    grid-column: 2;
+}
