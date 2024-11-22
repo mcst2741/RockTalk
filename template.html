@@ -5,33 +5,50 @@
     <title>Rock Talk: Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Notable&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=RocknRoll+One&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
     <div id="wrapper">
+
         <header>
-            <a href="index.html"><img src="images/hero-banner.jpg" alt="image of red rocks colorado"></a>
+            <div class="tab-desk">
+                <a href="index.html" class="tab-desk"><img src="images/hero-banner.jpg" alt="image of red rocks colorado"></a>
+            </div>
+
+            <div class="mobile">
+                <h1><img src="images/rocktalkicon-left.png" alt="Rock Icon" class="mobile-icon"> Rock Talk <img src="images/rocktalkicon-right.png" alt="Rock Icon" class="mobile-icon"></h1>
+                <h4>Uncover geology, one layer at a time!</h4>
+            </div>
         </header>
 
-        <nav>
+        <nav class="mobile-nav">
+            <div id="nav-links-mobile">
+                <a href="index.html">Home</a>
+                <a href="articles.html">Articles</a>
+                <a href="gallery.html">Image Gallery</a>
+                <a href="about.html">About</a>
+                <a href="credits.html">Credits</a>
+            </div>
+
+            <a class="nav-menu-icon" onclick="hamburgerMenu()">
+                <div id="hamburger-icon">&#9776;</div>
+            </a>
+        </nav>
+
+        <nav class="tab-desk">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="articles.html">Articles</a></li>
                 <li><a href="gallery.html">Image Gallery</a></li>
-                <li><a href="about.html">About Me</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="credits.html">Credits</a></li>
             </ul>
         </nav>
 
         <main>
-            <h1>Welcome to Rock Talk!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute</p>
+
         </main>
 
         <footer>
@@ -40,6 +57,6 @@
             <a href="https://pages.github.com/" target="_blank"><img src="images/github-mark-white.png" alt="GitHub Logo"> Hosted on GitHub Pages </a>
         </footer>
     </div>
-
+    <script src="script/script.js"></script>
 </body>
 </html>
