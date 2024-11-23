@@ -5,15 +5,37 @@
     <title>Rock Talk: About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Notable&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=RocknRoll+One&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <div id="wrapper">
     <header>
-        <a href="index.html"><img src="images/hero-banner.jpg" alt="image of red rocks colorado"></a>
+        <div class="tab-desk">
+            <a href="index.html" class="tab-desk"><img src="images/hero-banner.jpg" alt="image of red rocks colorado"></a>
+        </div>
+
+        <div class="mobile">
+            <h1><img src="images/rocktalkicon-left.png" alt="Rock Icon" class="mobile-icon"> Rock Talk <img src="images/rocktalkicon-right.png" alt="Rock Icon" class="mobile-icon"></h1>
+            <h4>Uncover geology, one layer at a time!</h4>
+        </div>
     </header>
 
-    <nav>
+    <nav class="mobile-nav">
+        <div id="nav-links-mobile">
+            <a href="index.html">Home</a>
+            <a href="articles.html">Articles</a>
+            <a href="gallery.html">Image Gallery</a>
+            <a href="about.html">About</a>
+            <a href="credits.html">Credits</a>
+        </div>
+
+        <a class="nav-menu-icon" onclick="hamburgerMenu()">
+            <div id="hamburger-icon">&#9776;</div>
+        </a>
+    </nav>
+
+    <nav class="tab-desk">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="articles.html">Articles</a></li>
@@ -24,21 +46,23 @@
     </nav>
 
     <main>
-        
-        <h1>About Me</h1>
-        <p>Hello everyone!</p>
-        <p>I am a geology student and programmer</p>
-        <p>I made this website to answer some questions I frequently get about geologic concepts and the geology of Colorado.</p>
-        <img src="" alt="">
+        <div class="about-me">
+            <h2>About Me</h2>
+            <img src="images/gettyimages-1345729945-170667a.jpg" alt="image of Rock Talk">
+            <p>Hello everyone!</p>
+            <p>I am a geology student and programmer</p>
+            <p>I made this website to answer some questions I frequently get about geologic concepts and the geology of Colorado.</p>
+        </div>
 
         <div class="contact">
+            <h2>Want to get in touch with me?</h2>
             <p>Email me at: <a href="mailto:msteenbock@student.cccs.edu">msteenbock@student.cccs.edu</a></p>
             <p>Check out my other projects on GitHub</p>
             <p>Connect with me on LinkedIn</p>
         </div>
 
-
-            <form action="https://formspree.io/f/mgvezdle" method="POST" class="form-grid">
+        <div class="form-grid">
+            <form action="https://formspree.io/f/mgvezdle" method="POST">
                 <fieldset>
                     <legend>General Information</legend>
 
@@ -52,18 +76,25 @@
                     <input type="date" name="date" id="date">
 
                     <p>Preferred Response Method:</p>
-                    <label for="email-response">Email</label>
-                    <input type="radio" name="response-type" id="email-response" value="Email">
+                    <label for="email-response">
+                        <input type="radio" name="response-type" id="email-response" value="Email">
+                        Email
+                    </label>
 
-                    <label for="blog-response">Blog Post</label>
-                    <input type="radio" name="response-type" id="blog-response" value="Blog Post">
+                    <label for="blog-response">
+                        <input type="radio" name="response-type" id="blog-response" value="Blog Post">
+                        Blog Post
+                    </label>
 
-                    <label for="verbal-response">Conversation</label>
-                    <input type="radio" name="response-type" id="verbal-response" value="Conversation">
+                    <label for="verbal-response">
+                        <input type="radio" name="response-type" id="verbal-response" value="Conversation">
+                        Conversation
+                    </label>
 
-                    <label for="no-response">No Response</label>
-                    <input type="radio" name="response-type" id="no-response" value="No Response">
-
+                    <label for="no-response">
+                        <input type="radio" name="response-type" id="no-response" value="No Response">
+                        No Response
+                    </label>
 
                 </fieldset>
 
@@ -80,14 +111,12 @@
                     </select>
 
                     <label for="question">Your Geology Question Below: </label>
-                    <textarea name="question" id="question" cols="50" rows="10"></textarea>
-
+                    <textarea name="question" id="question" cols="30" rows="10"></textarea>
                 </fieldset>
-                <input type="submit" id="submit" value="Submit Question" class="form-submit">
+                <input type="submit" id="submit" value="Submit" class="form-submit">
                 <input type="reset" id="reset" value="Reset" class="form-submit">
             </form>
-
-
+        </div>
 
     </main>
 
@@ -97,6 +126,6 @@
         <a href="https://pages.github.com/" target="_blank"><img src="images/github-mark-white.png" alt="GitHub Logo"> Hosted on GitHub Pages </a>
     </footer>
 </div>
-
+<script src="script/script.js"></script>
 </body>
 </html>

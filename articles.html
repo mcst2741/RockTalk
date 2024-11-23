@@ -9,11 +9,33 @@
 </head>
 <body>
 <div id="wrapper">
+
     <header>
-        <a href="index.html"><img src="images/hero-banner.jpg" alt="image of red rocks colorado"></a>
+        <div class="tab-desk">
+            <a href="index.html" class="tab-desk"><img src="images/hero-banner.jpg" alt="image of red rocks colorado"></a>
+        </div>
+
+        <div class="mobile">
+            <h1><img src="images/rocktalkicon-left.png" alt="Rock Icon" class="mobile-icon"> Rock Talk <img src="images/rocktalkicon-right.png" alt="Rock Icon" class="mobile-icon"></h1>
+            <h4>Uncover geology one layer at a time!</h4>
+        </div>
     </header>
 
-    <nav>
+    <nav class="mobile-nav">
+        <div id="nav-links-mobile">
+            <a href="index.html">Home</a>
+            <a href="articles.html">Articles</a>
+            <a href="gallery.html">Image Gallery</a>
+            <a href="about.html">About</a>
+            <a href="credits.html">Credits</a>
+        </div>
+
+        <a class="nav-menu-icon" onclick="hamburgerMenu()">
+            <div id="hamburger-icon">&#9776;</div>
+        </a>
+    </nav>
+
+    <nav class="tab-desk">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="articles.html">Articles</a></li>
@@ -25,7 +47,6 @@
 
     <main>
         <section class="article-list">
-
             <a href="article1.html">
                 <article class="article-preview">
                     <img src="images/gettyimages-1345729945-170667a.jpg" height="300" width="300" alt="Remove later">
@@ -67,6 +88,6 @@
         <a href="https://pages.github.com/" target="_blank"><img src="images/github-mark-white.png" alt="GitHub Logo"> Hosted on GitHub Pages </a>
     </footer>
 </div>
-
+<script src="script/script.js"></script>
 </body>
 </html>

@@ -1,9 +1,10 @@
 /*CSS Reset*/
-body, header, main, nav, img, footer, h1, h2, ul, aside {
+body, header, main, nav, img, footer, h1, h2, ul, aside{
     margin: 0;
     padding: 0;
 }
 
+/*Style Rules Across All Viewports*/
 body {
     background-color: #F6E9E3;
 }
@@ -18,8 +19,7 @@ nav {
     background-color: #86765E;
 }
 
-/*Style Rules for footer*/
-
+/*Style Rules for Footer Area*/
 footer {
     text-align: center;
     font-size: 1em;
@@ -46,115 +46,8 @@ footer img {
 }
 
 
-
-/*Articles Page Classes*/
-
-.article-list {
-    display: inline-block;
-    width: 95%;
-    margin: 2em;
-}
-
-.article-list a{
-    text-decoration: none;
-    color: black;
-}
-
-.article-preview:hover {
-    background-color: rgba(159, 128, 120, 0.5);
-    transform: scale(1.002);
-}
-
-.article-preview {
-    border: 1px solid black;
-    overflow: auto;
-    margin: 2em auto;
-}
-
-.article-preview img {
-    float: left;
-    width: 30%;
-    height: 30%;
-    margin-right: 1em;
-}
-.article-preview h2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: 0 2em;
-
-}
-
-.article-preview p {
-    font-size: 1em;
-    margin: 1em;
-}
-
-
-
-form {
-    text-align: center;
-    margin: 2em auto;
-    width: 80%;
-    justify-content: center;
-    font-family:"Schibsted Grotesk", sans-serif;
-}
-
-fieldset, input {
-    margin-bottom: 1em;
-}
-
-fieldset legend {
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-label {
-    display: inline-block;
-    padding-right: .75em;
-    width: 50%;
-    text-align: left;
-}
-
-input, select , textarea {
-    display: inline-block;
-    margin-bottom: 1em;
-    width: 50%;
-    padding: 0.5em;
-    border: 1px solid black;
-}
-
-
-.form-submit{
-    background-color: #86765E;
-    border: none;
-    border-radius: 5px;
-    padding: 1em;
-    font-size: 1em;
-    color: black;
-    font-weight: bold;
-    justify-self: center;
-    /*Tablet and above*/
-    grid-column: 1 / span 2;
-    padding: 1em;
-}
-
-.form-submit:hover {
-    background-color: #CCAC7DFF;
-}
-
-/*Tablet and above layout*/
-
-
-.form-grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 2em;
-}
-
-
-/* Media Query for Mobile Viewport */
-@media screen and (max-width: 619px), print {
-    .mobile{
+/* Media Query for Mobile Viewport and Property Cascading*/
+    .mobile {
         display: block;
         font-family: "RocknRoll One", sans-serif;
     }
@@ -163,33 +56,37 @@ input, select , textarea {
         display: none;
     }
 
-    /*Style Rules for Mobile Header Area*/
-
-    .mobile h1{
+    /*Style Rules for Mobile Header and Body Area*/
+    .mobile h1 {
         display: flex;
         font-size: 1.5em;
-        margin: 1em 2em;
-        align-items: center;
+        margin-top: 1em;
+        margin-left: 3em;
+        text-align: center;
         font-style: italic;
     }
 
-    .mobile h4{
+    .mobile h4 {
         font-size: 1em;
         text-align: center;
     }
 
-    .mobile-icon{
+    .mobile-icon {
         width: 15%;
         height: auto;
         padding: 0 .5em;
     }
 
+   /* body {
+        background: linear-gradient(#e3ccb4, #dcd3a5);
+    }*/
+
     /*Style Rules for Mobile Navigation Area*/
-    nav {
+    .mobile-nav {
         background-color: #86765E;
     }
 
-    .mobile-nav a{
+    .mobile-nav a {
         display: block;
         color: black;
         text-align: center;
@@ -223,6 +120,7 @@ input, select , textarea {
         display: none;
     }
 
+    /*Style Rules for Mobile Homepage Classes*/
     .home-content {
         font-family: "Noto Serif", sans-serif;
         font-size: 1em;
@@ -234,18 +132,117 @@ input, select , textarea {
         display: block;
     }
 
-    .welcome-information h1, .extra-information h2{
+    .welcome-information h1, .extra-information h2 {
         font-family: "RocknRoll One", sans-serif;
     }
 
-    .extra-information li{
+    .extra-information li {
         list-style-type: none;
     }
+
+    /*Style Rules for Mobile Article Selection Classes
+    Articles Page Classes
+.article-list {
+    display: inline-block;
+    width: 95%;
+    margin: 2em;
 }
 
+.article-list a{
+    text-decoration: none;
+    color: black;
+}
+
+.article-preview:hover {
+    background-color: #9F80787F;
+    transform: scale(1.002);
+}
+
+.article-preview {
+    border: 1px solid black;
+    overflow: auto;
+    margin: 2em auto;
+}
+
+.article-preview img {
+    float: left;
+    width: 30%;
+    height: 30%;
+    margin-right: 1em;
+}
+.article-preview h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 2em;
+
+}
+
+.article-preview p {
+    font-size: 1em;
+    margin: 1em;
+}
+*/
+
+
+    /*Style Rules for Mobile About Page Classes*/
+    .about-me h2, .contact h2 {
+        font-family: "RocknRoll One", sans-serif;
+        text-align: center;
+    }
+
+    .about-me, .contact {
+        display: block;
+        text-align: center;
+        font-family: "Noto Serif", sans-serif;
+    }
+
+    /*Style Rules For Question Form*/
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2em;
+        width: 80%;
+        margin: 2em auto;
+        padding: 2em;
+    }
+
+    fieldset {
+        width: 90%;
+        padding: 1em;
+    }
+
+    fieldset label {
+        display: flex;
+        font-size: 1em;
+    }
+
+    /*Aligns labels with radio buttons on form*/
+    input[type="radio"]{
+        width: 10%;
+    }
+
+    input, select, textarea {
+       width: 90%;
+       padding: 0.5em;
+       margin-bottom: 1em;
+       box-sizing: border-box;
+   }
+
+    .form-submit{
+        display: flex;
+        background-color: #86765E;
+        border: none;
+        border-radius: 5px;
+        padding: 1em;
+        margin-top: 1em;
+        font-size: 1em;
+        color: black;
+        font-weight: bold;
+        justify-self: center;
+    }
 
 /* Media Query for Tablet Viewport */
-@media screen and (min-width: 620px), print {
+@media screen and (min-width: 620px), print{
 
     .mobile, .mobile-nav{
         display: none;
@@ -259,8 +256,7 @@ input, select , textarea {
         width: 100%;
     }
 
-
-
+    /*Style Rules for Table Navigation Area*/
     nav ul {
         text-align: center;
         list-style-type: none;
@@ -270,19 +266,19 @@ input, select , textarea {
 
     nav li {
         display: inline-block;
-        font-size: 1.5em;
         font-weight: bold;
-        padding: .25em .75em;
+        padding: .25em .5em;
     }
 
     nav li a {
         display: block;
+        font-size: 1.25em;
         text-decoration: none;
         padding: 1em;
-        text-decoration: none;
         color: black;
     }
 
+    /*Style Rules for Tablet Homepage Class*/
     .home-content {
         font-size: 1.5em;
         display: grid;
@@ -307,12 +303,26 @@ input, select , textarea {
 
     .extra-information li {
         list-style-type: none;
+        padding: .75em;
     }
 
 
 
+    /*Style Rules for Table About Page Classes*/
+    .about-me h2, .contact h2 {
+        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+
+    }
+
+    .form-submit {
+        grid-column: 1 / span 2;
+        padding: 1em;
+    }
+
+
 
 }
+
 /* Media Query for Desktop Viewports */
 @media screen and (min-width: 1000px), print{
     .mobile, .mobile-nav{
@@ -322,8 +332,10 @@ input, select , textarea {
         display: block;
     }
 
+    /*Style Rules for Average Desktop Navigation Area*/
     nav li a {
-        padding: .75em 2em;
+        padding: .75em 2.25em;
+        font-size: 1.5em;
     }
 
     nav li:hover {
@@ -332,9 +344,33 @@ input, select , textarea {
         font-style: italic;
     }
 
+    .home-content {
+        margin: 1em;
+    }
+
+    .welcome-information {
+        text-align: left;
+    }
+
+    .welcome-information img {
+        float: left;
+        padding-right: 1em
+    }
+
+    .extra-information {
+        text-align: right;
+    }
+
+    /*Style Rules for Average Desktop About Page Classes*/
+    .contact a:hover{
+        color: black;
+    }
+
+    .form-submit:hover {
+        background-color: #CCAC7DFF;
+    }
 
 }
-
 
 /* Media Query for Large Desktop Viewports */
 @media screen and (min-width: 1921px), print {
@@ -345,12 +381,23 @@ input, select , textarea {
         display: block;
     }
 
+    /*Style Rules for Large Desktop Header Area*/
     header img {
         height: 60vh;
     }
 
-    nav li{
+    /*Style Rules for Large Desktop Navigation Area*/
+    nav li a{
         padding: .5em 5em;
+        font-size: 1.75em;
     }
+
+    /*Style Rules for Large Desktop Homepage Classes*/
+    .welcome-information {
+        width: 75%;
+    }
+
+    /*Style Rules for Large Desktop About Page Classes*/
+
 
 }
