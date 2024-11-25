@@ -2,6 +2,7 @@
 body, header, main, nav, img, footer, h1, h2, ul, aside, form{
     margin: 0;
     padding: 0;
+
 }
 
 /*Style Rules Across All Viewports*/
@@ -132,18 +133,24 @@ nav {
         color: black;
     }
 
-    .article-preview {
-        border-top: 1px dashed black;
-        padding: 1em;
-    }
-
-    .article-preview:last-of-type{
-        border-bottom: 1px dashed black;
+    .article-list article {
+        border-bottom: 1px solid black;
         margin-bottom: 1em;
     }
 
+    /*A lot of button mashing to get the mobile article list to have a top and bottom border*/
+    .article-list a:first-of-type article{
+        border-top: 1px solid black;
+    }
+
+    .article-preview {
+        padding: 1em;
+        overflow: auto;
+    }
+
     .article-preview img {
-        display: none;
+        width: 0;
+        height: 0;
     }
 
     .article-preview h2 {
@@ -247,7 +254,7 @@ nav {
     }
 
     footer a, footer p{
-        font-family: "Century Gothic", sans-serif;
+        font-family: "Schibsted Grotesk", sans-serif;
         text-decoration: none;
         color: black;
     }
@@ -261,7 +268,6 @@ nav {
         width: 1em;
         height: 1em;
     }
-
 
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 620px), print{
@@ -337,14 +343,8 @@ nav {
 
     .article-preview {
         border: 1px solid black;
-        overflow: auto;
         margin: 2em auto;
-        position: relative;
-        display: block;
-    }
-
-    .article-preview:last-of-type{
-        border-bottom: 1px solid black;
+        padding: 0;
     }
 
     .article-preview h2 {
@@ -360,11 +360,11 @@ nav {
 
     .article-preview img {
         float: left;
+        display: block;
         width: 45%;
         height: 45%;
         margin-right: 1em;
     }
-
 
     /*Style Rules for Tablet Form and About Page Classes*/
     .about-me, .contact {
@@ -457,11 +457,11 @@ nav {
     /*Style Rules for Average Desktop Articles Page*/
     .article-list{
         margin: 2em;
-        line-height: 2.5em;
     }
 
     .article-preview p{
         line-height: 2;
+        font-size: 1.5em;
         -webkit-line-clamp: 8;
     }
 
