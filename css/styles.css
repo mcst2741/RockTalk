@@ -8,7 +8,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
 /*Style Rules Across All Viewports*/
 
 
-img, video {
+img, video, iframe {
    max-width: 100%;
    max-height: 100%;
    display: block;
@@ -26,7 +26,6 @@ nav {
 }
 
 
-
 /* Media Query for Mobile Viewport and Property Cascading*/
     .mobile {
         display: block;
@@ -41,25 +40,34 @@ nav {
     .mobile h1 {
         display: flex;
         font-size: 1.5em;
-        margin-top: 1em;
-        margin-left: 3em;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         font-style: italic;
+        gap: 1em;
+        padding: 1em;
+
+        /*Sticky Position, had to use fixed because the actual sticky property would not scroll past h4 element.*/
+        background-color: #f4dfcc;
+        position: fixed;
+        top: 0;
+        z-index: 10;
     }
 
     .mobile h4 {
         font-size: 1em;
         text-align: center;
+        margin-top: 5em;
     }
 
     .mobile-icon {
         width: 15%;
         height: auto;
-        padding: 0 .5em;
     }
 
-   body {
-        background: linear-gradient(#f4dfcc, #dad6cc);
+
+    body {
+       background: linear-gradient(#f4dfcc, #dad6cc);
    }
 
     /*Style Rules for Mobile Navigation Area*/
@@ -95,6 +103,7 @@ nav {
     .nav-menu-icon {
         color: black;
         font-size: 3em;
+        z-index: 20;
     }
 
     #nav-links-mobile {
@@ -119,6 +128,11 @@ nav {
 
     .extra-information li {
         list-style-type: none;
+    }
+
+    .extra-information a{
+        text-decoration: underline;
+        color: inherit;
     }
 
     /*Style Rules for Mobile Article Selection Classes Articles Page Classes*/
@@ -167,6 +181,47 @@ nav {
         margin: 1em;
         -webkit-line-clamp: 4;
     }
+
+    /*Style rules for article one on mobile view port.*/
+    #article-one, #article-one-resources p {
+        font-family: "Noto Serif", sans-serif;
+        font-size: 1.15em;
+        margin: 1.5em;
+        line-height: 1.5em;
+        text-align: justify;
+        display: inline-block;
+    }
+
+    #article-one img, #article-one-resources iframe {
+        width: 85%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #article-one p, #article-one-resources {
+        padding: 1.5em;
+    }
+
+    #article-one h1{
+        border-top: 1px solid black;
+    }
+
+    #article-one h1, #article-one-resources h3{
+        font-weight: bold;
+        font-family: "RocknRoll One", sans-serif;
+        padding: 1em;
+        text-align: center;
+    }
+
+    #article-one-resources iframe{
+        height: 20vh;
+        padding: 1em;
+    }
+
+     #article-one-resources{
+        padding-bottom: 1em;
+    }
+
 
 /*Style Rules for Mobile About Page Classes*/
 
@@ -309,10 +364,18 @@ nav {
     /*Style Rules for Tablet Homepage Class*/
     .home-content {
         font-size: 1.5em;
-        display: grid;
+       /* display: grid;
         grid-template-columns: 2fr 1fr;
-        gap: 20px;
-        padding: 10px;
+        gap: 20px;*/
+        columns: 2;
+        column-gap: 2em;
+        column-width: 5rem;
+        padding: 1em 0;
+        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+    }
+
+    .welcome-information h1, .extra-information h2 {
+        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
     }
 
     .welcome-information {
@@ -326,12 +389,16 @@ nav {
         text-align: center;
         padding: 0 2em 0 0;
         box-sizing: border-box;
-        grid-column: 2;
+       /* grid-column: 2;*/
     }
 
     .extra-information li {
         list-style-type: none;
         padding: .75em;
+    }
+
+    .welcome-information, .extra-information {
+        break-inside: avoid;
     }
 
     /*Style Rules for Tablet Articles Page*/
@@ -364,6 +431,28 @@ nav {
         width: 45%;
         height: 45%;
         margin-right: 1em;
+    }
+
+    /*Style rules for article one for tablet view port*/
+    #article-one {
+        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+        font-size: 1.5em;
+        line-height: 1.5;
+        margin: 2em;
+    }
+
+    #article-one h1{
+        border-top: none;
+    }
+
+    #article-one-resources iframe{
+        height: 30vh;
+    }
+
+    #article-one-resources{
+        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+        font-size: 1.25em;
+        margin: .5em;
     }
 
     /*Style Rules for Tablet Form and About Page Classes*/
@@ -439,6 +528,11 @@ nav {
 
     .home-content {
         margin: 1em;
+        column-width: 10rem;
+    }
+
+    .home-content a:hover {
+        color: white;
     }
 
     .welcome-information {
@@ -447,11 +541,16 @@ nav {
 
     .welcome-information img {
         float: left;
+        width: 60%;
         padding-right: 1em
     }
 
     .extra-information {
         text-align: right;
+    }
+
+    .extra-information a{
+        text-decoration: none;
     }
 
     /*Style Rules for Average Desktop Articles Page*/
@@ -473,6 +572,27 @@ nav {
     .article-preview:hover {
         background-color: #9F80787F;
         transform: scale(1.002);
+    }
+
+    /*Style rules for article one page desktop view port.*/
+    #article-one img {
+        float: left;
+        width: 30%;
+        padding-right: 2em;
+    }
+
+    #article-one-resources iframe{
+        width: 35%;
+        height: 40vh;
+        float: left;
+        margin: 1em 3em;
+    }
+
+    #article-one-resources p{
+        float: right;
+        text-align: right;
+        margin: 2em;
+        font-size: 1em;
     }
 
 

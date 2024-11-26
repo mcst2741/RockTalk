@@ -5,15 +5,38 @@
     <title>Rock Talk: Types of Mountains</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Notable&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=RocknRoll+One&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/stone-favicon-shortcut.png" type="image/png">
+    <link rel="icon" href="images/stone-favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/stone-favicon-apple.png" type="image/png" sizes="180x180">
+    <link rel="icon" href="images/stone-favicon-android-chrome.png" type="image/png" sizes="192x192">
 </head>
 <body>
 <div id="wrapper">
-    <header>
-        <a href="index.html"><img src="images/hero-banner.jpg" alt="image of red rocks colorado"></a>
+    <header class="tab-desk">
+        <a href="index.html" class="tab-desk"><img src="images/hero-banner.jpg" alt="image of red rocks colorado"></a>
     </header>
 
-    <nav>
+    <header class="mobile">
+        <h1><img src="images/rocktalk-mobile-left.png" alt="Rock Icon" class="mobile-icon"> Rock Talk <img src="images/rocktalk-mobile-right.png" alt="Rock Icon" class="mobile-icon"></h1>
+        <h4>Uncover geology one layer at a time!</h4>
+    </header>
+
+    <nav class="mobile-nav">
+        <div id="nav-links-mobile">
+            <a href="index.html">Home</a>
+            <a href="articles.html">Articles</a>
+            <a href="gallery.html">Image Gallery</a>
+            <a href="about.html">About</a>
+            <a href="credits.html">Credits</a>
+        </div>
+
+        <a class="nav-menu-icon" onclick="hamburgerMenu()">
+            <div id="hamburger-icon">&#9776;</div>
+        </a>
+    </nav>
+
+    <nav class="tab-desk">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="articles.html">Articles</a></li>
@@ -49,6 +72,6 @@
         <a href="https://pages.github.com/" target="_blank"><img src="images/github-mark-white.png" alt="GitHub Logo"> Hosted on GitHub Pages </a>
     </footer>
 </div>
-
+<script src="script/script.js"></script>
 </body>
 </html>
