@@ -224,12 +224,57 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
     }
 
     /*Style Rules for mobile article style 2*/
-    table,th, td, tr {
+
+    /*Style rules for mobile table.*/
+    .mobile-table caption {
+        text-align: center;
+        margin: 0 auto;
+        font-weight: bold;
+    }
+
+    .mobile-table table, .mobile-table caption, .mobile-table tbody, .mobile-table th, .mobile-table td, .mobile-table tr{
         display: block;
     }
 
-    thead, tbody {
+    .mobile-table table{
+        width: 90%;
+        margin: 1em auto;
+        font-family: "RocknRoll One", sans-serif;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    .mobile-table thead {
         display: none;
+    }
+
+    .mobile-table th{
+        font-weight: bold;
+    }
+
+    .mobile-table td, .mobile-table tr {
+        padding: 0.5em;
+        border: 1px solid black;
+    }
+
+    .mobile-table tr td:nth-of-type(n+1){
+        display: inline-block;
+    }
+
+    .mobile-table tr td::before {
+        font-weight: bold;
+        display: block;
+        clear: both;
+    }
+
+    .mobile-table td:nth-of-type(1)::before {
+        content: "Collisional";
+        border-bottom: 1px solid black;
+    }
+
+    .mobile-table td:nth-of-type(2)::before {
+        content: "Volcanic";
+        border-bottom: 1px solid black;
     }
 
 
@@ -492,7 +537,6 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
     }
 
     table, tr, th, td {
-        border-collapse: collapse;
         padding: 1em;
         text-align: center;
     }
@@ -501,7 +545,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
         border: 1px solid black;
     }
 
-    tr:nth-child(odd){
+    tr:nth-child(even) {
         background-color: #86765E70;
     }
 
