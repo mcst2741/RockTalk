@@ -30,7 +30,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
         font-family: "RocknRoll One", sans-serif;
     }
 
-    .tab-desk {
+    .tab-desk, .tab-desk-table {
         display: none;
     }
 
@@ -137,24 +137,24 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
     }
 
     /*Style Rules for Mobile Article Selection Classes Articles Page Classes*/
-    .article-list {
+    #article-list {
         display: block;
         width: 75%;
         margin: 0 auto;
     }
 
-    .article-list a{
+    #article-list a{
         text-decoration: none;
         color: black;
     }
 
-    .article-list article {
+    #article-list article {
         border-bottom: 1px solid black;
         margin-bottom: 1em;
     }
 
     /*A lot of button mashing to get the mobile article list to have a top and bottom border*/
-    .article-list a:first-of-type article{
+    #article-list a:first-of-type article{
         border-top: 1px solid black;
     }
 
@@ -184,7 +184,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
     }
 
     /*Style rules for article one on mobile view port.*/
-    #article-one, #article-one-resources p {
+    .article-style-one, .article-style-one-resources p {
         font-family: "Noto Serif", sans-serif;
         font-size: 1.15em;
         margin: 1.5em;
@@ -193,43 +193,76 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
         display: inline-block;
     }
 
-    #article-one img, #article-one-resources iframe {
+    .article-style-one, .article-style-one-resources iframe {
         width: 85%;
         margin: 0 auto;
         display: block;
     }
 
-    #article-one p, #article-one-resources {
+    .article-style-one p, .article-style-one-resources {
         padding: 1.5em;
     }
 
-    #article-one h1{
+    .article-style-one h1{
         border-top: 1px solid black;
     }
 
-    #article-one h1, #article-one-resources h2{
+    .article-style-one h1, .article-style-one-resources h2{
         font-weight: bold;
         font-family: "RocknRoll One", sans-serif;
         padding: 1em;
         text-align: center;
     }
 
-    #article-one-resources iframe{
+    .article-style-one-resources iframe{
         height: 20vh;
         padding: 1em;
     }
 
-     #article-one-resources{
+    .article-style-one-resources {
         padding-bottom: 1em;
     }
 
     /*Style Rules for mobile article style 2*/
 
-    /*Style rules for mobile table.*/
-    .mobile-table caption {
-        text-align: center;
-        margin: 0 auto;
+    .article-style-two h1, .article-style-two h4, .article-style-two-resources h3, .article-style-two-resources figcaption {
+        font-family: "RocknRoll One", sans-serif;
         font-weight: bold;
+        text-align: center;
+    }
+
+    .article-style-two h1{
+        padding-top: 1em;
+    }
+
+    .article-style-two, .article-style-two-resources {
+        font-family: "Noto Serif", sans-serif;
+        padding: 1em;
+    }
+
+    .article-style-two p, .article-style-two-resources ul {
+        text-align: center;
+
+    }
+
+    .article-style-two-resources ul {
+        list-style-type: none;
+        line-height: 2em;
+    }
+
+    .article-style-two-resources figure {
+        width: 75%;
+    }
+
+    .article-style-two-resources figcaption {
+        font-weight: 600;
+    }
+
+
+    /*Style rules for mobile table in article two style.*/
+    .mobile-table caption {
+        font-weight: bold;
+        border: 1px solid #615344;
     }
 
     .mobile-table table, .mobile-table caption, .mobile-table tbody, .mobile-table th, .mobile-table td, .mobile-table tr{
@@ -238,10 +271,11 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
 
     .mobile-table table{
         width: 90%;
-        margin: 1em auto;
+        margin: 1.5em auto;
         font-family: "RocknRoll One", sans-serif;
         border: 1px solid black;
         text-align: center;
+        box-shadow: 5px 5px 3px #615344;
     }
 
     .mobile-table thead {
@@ -254,11 +288,15 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
 
     .mobile-table td, .mobile-table tr {
         padding: 0.5em;
-        border: 1px solid black;
+        border: 1px solid #615344;
     }
 
     .mobile-table tr td:nth-of-type(n+1){
         display: inline-block;
+    }
+
+    .mobile-table td{
+        background-color: #86765E70;
     }
 
     .mobile-table tr td::before {
@@ -269,12 +307,12 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
 
     .mobile-table td:nth-of-type(1)::before {
         content: "Collisional";
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #615344;
     }
 
     .mobile-table td:nth-of-type(2)::before {
         content: "Volcanic";
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #615344;
     }
 
 
@@ -383,10 +421,10 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 620px), print{
 
-    .mobile, .mobile-nav{
+    .mobile, .mobile-nav, .mobile-table{
         display: none;
     }
-    .tab-desk {
+    .tab-desk, .tab-desk-table {
         display: block;
     }
 
@@ -467,7 +505,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
     }
 
     /*Style Rules for Tablet Articles Page*/
-    .article-list {
+    #article-list {
         display: inline-block;
         width: 95%;
         margin: 0 1em;
@@ -499,40 +537,71 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
     }
 
     /*Style rules for article one for tablet view port*/
-    #article-one {
+    .article-style-one {
         font-family: "Schibsted Grotesk", sans-serif; /*Change*/
         font-size: 1.5em;
         line-height: 1.5;
         margin: 2em;
     }
 
-    #article-one h1{
+    .article-style-one h1{
         border-top: none;
     }
 
-    #article-one-resources iframe{
+    .article-style-one-resources iframe{
         height: 30vh;
     }
 
-    #article-one-resources{
+    .article-style-one-resources {
         font-family: "Schibsted Grotesk", sans-serif; /*Change*/
         font-size: 1.25em;
         margin: .5em;
     }
 
-    /*Style rules for article two*/
-    caption {
+    /*Style rules for article style two for tablet viewport*/
+    .article-style-two, .article-style-two-resources, .tab-desk-table, .article-style-two h1, .article-style-two h4, .article-style-two-resources h3, .article-style-two-resources figcaption {
         font-family: "Schibsted Grotesk", sans-serif;
-        font-size: 1.5em;
+    }
+
+    .article-style-two, .article-style-two-resources {
+        font-size: 1.25em;
+    }
+
+    .article-style-two p {
+        text-align: left;
+        margin-left: 1em;
+    }
+
+    .article-style-two-resources figure {
+        margin: 1em auto;
+        display: block;
+    }
+
+    .article-style-two-resources figure img {
+        width: 100%;
+    }
+
+    .article-style-two-resources ul{
+        text-align: left;
+        line-height: 3em;
+        padding: 0 10%;
+    }
+
+
+
+    /*Style rules for table in article style two for tablet viewport*/
+    caption {
+        font-size: 1.25em;
+        font-weight: bold;
+        padding-bottom: 1em;
     }
 
     table {
         width: 90%;
         border-collapse: collapse;
         margin: 2em auto;
-        border: 3px solid black;
-        box-shadow: 10px 10px 8px black;
-        font-family: "Schibsted Grotesk", sans-serif;
+        border: 3px solid #615344;
+        box-shadow: 10px 10px 8px #86765E;
         font-size: 1.25em;
     }
 
@@ -545,7 +614,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
         border: 1px solid black;
     }
 
-    tr:nth-child(even) {
+    tr:nth-child(even), thead {
         background-color: #86765E70;
     }
 
@@ -635,10 +704,6 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
         color: white;
     }
 
-    .welcome-information {
-        text-align: left;
-    }
-
     .welcome-information img {
         float: left;
         width: 60%;
@@ -654,7 +719,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
     }
 
     /*Style Rules for Average Desktop Articles Page*/
-    .article-list{
+    #article-list{
         margin: 2em;
     }
 
@@ -675,24 +740,44 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
     }
 
     /*Style rules for article one page desktop view port.*/
-    #article-one img {
+    .article-style-one img {
         float: left;
         width: 30%;
         padding-right: 2em;
     }
 
-    #article-one-resources iframe{
+    .article-style-one-resources iframe{
         width: 35%;
         height: 40vh;
         float: left;
         margin: 1em 3em;
     }
 
-    #article-one-resources p{
+    .article-style-one-resources p{
         float: right;
         text-align: right;
         margin: 2em;
         font-size: 1em;
+    }
+
+    /*Article style two classes for desktop viewport*/
+    #desk-article-column {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+
+    .article-style-two-resources {
+        margin-top: 2em;
+    }
+
+    .article-style-two, .article-style-two-resources {
+        font-size: 1.5em;
+    }
+
+    .article-style-two p {
+        padding: 1em;
+        margin-left: 2em;
     }
 
 
