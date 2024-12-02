@@ -1,5 +1,5 @@
 /*CSS Reset*/
-body, header, main, nav, img, footer, h1, h2, ul, aside, form{
+body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaption, section{
     margin: 0;
     padding: 0;
 
@@ -52,12 +52,11 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
         z-index: 10;
     }
 
-    /*Turn into id?*/
     #mobile-h4 {
         font-size: 1em;
         text-align: center;
         height: 1em; /*Needs height and margin so the sticky h1 does not cover it.*/
-        margin-top: 4em;
+        margin-top: 5em;
     }
 
     .mobile-icon {
@@ -242,7 +241,6 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
 
     .article-style-two p, .article-style-two-resources ul {
         text-align: center;
-
     }
 
     .article-style-two-resources ul {
@@ -252,6 +250,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
 
     .article-style-two-resources figure {
         width: 75%;
+        margin: 0 auto;
     }
 
     .article-style-two-resources figcaption {
@@ -313,6 +312,57 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
     .mobile-table td:nth-of-type(2)::before {
         content: "Volcanic";
         border-bottom: 1px solid #615344;
+    }
+
+/*Style Rules for Mobile Gallery Page*/
+
+    #gallery-introduction{
+        display: block;
+        text-align: center;
+        width: 80%;
+        margin: 2em auto;
+        font-family: "RocknRoll One", sans-serif;
+
+    }
+
+    #gallery-introduction img{
+        max-width: 100%;
+        margin: 0 auto;
+        padding-bottom: 1em;
+    }
+
+    #gallery-introduction figcaption {
+        padding-top: 1em;
+        font-family: "Noto Serif", sans-serif;
+        font-size: 1.25em;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 1.5em auto;
+    }
+
+    .gallery-figure{
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 2em;
+        font-family: "Noto Serif", sans-serif;
+        font-size: 1.25em;
+    }
+
+    .gallery-figure img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .gallery-figure figcaption{
+        padding-top: 1em;
+        font-family: "RocknRoll One", sans-serif;
+        font-weight: bold;
     }
 
 
@@ -467,12 +517,12 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
     /*Style Rules for Tablet Homepage Class*/
     .home-content {
         font-size: 1.5em;
-       /* display: grid;
+        display: grid;
         grid-template-columns: 2fr 1fr;
-        gap: 20px;*/
-        columns: 2;
+        gap: 20px;
+       /* columns: 2;
         column-gap: 2em;
-        column-width: 5rem;
+        column-width: 5rem;*/
         padding: 1em 0;
         font-family: "Schibsted Grotesk", sans-serif; /*Change*/
     }
@@ -587,8 +637,6 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
         padding: 0 10%;
     }
 
-
-
     /*Style rules for table in article style two for tablet viewport*/
     caption {
         font-size: 1.25em;
@@ -618,10 +666,39 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
         background-color: #86765E70;
     }
 
+    /*Style rules for gallery page in tablet viewport*/
+    #gallery-introduction{
+        width: 70%;
+        font-family: "Schibsted Grotesk", sans-serif;
+        padding-bottom: 2em;
+    }
+
+    #gallery-introduction img{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #gallery-introduction figcaption {
+
+    }
+
+    .gallery-grid {
+        width: 80%;
+        margin: 2em auto;
+    }
+
+    .gallery-figure{
+        width: 90%;
+        text-align: center;
+        margin: 1em auto;
+        font-family: "Schibsted Grotesk", sans-serif;
+    }
+
     /*Style Rules for Tablet Form and About Page Classes*/
     .about-me, .contact {
         font-family: "Schibsted Grotesk", sans-serif; /*Change*/
-        padding: 1em;
+        padding: 1em 2em;
     }
 
     .about-me h2, .contact h2,  .form-grid h2 {
@@ -693,11 +770,11 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
         background: #CCAC7DFF;
         transform: scale(1.12);
         font-style: italic;
+        text-shadow: 2px 2px 4px #86765E;
     }
 
     .home-content {
         margin: 1em;
-        column-width: 10rem;
     }
 
     .home-content a:hover {
@@ -780,10 +857,27 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
         margin-left: 2em;
     }
 
+    /*Style rules for average desktop image gallery*/
+
+    #gallery-introduction img{
+        width: 75%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+
+    .gallery-figure{
+        width: 90%;
+        margin: 2em auto;
+        font-family: "Schibsted Grotesk", sans-serif;
+    }
+
 
     /*Style Rules for Average Desktop About Page Classes*/
-    .about-me {
-        text-align: left;
+    .about-me img{
+        max-width: 60%;
     }
 
     .contact a:hover{
@@ -795,6 +889,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
     }
 
     .form-grid form{
+        padding-top: 1em;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 35px;
@@ -830,10 +925,6 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
         display: block;
     }
 
-    /*Style Rules for Large Desktop Header Area*/
-   /* header img {
-        height: 60vh;
-    }*/
 
     /*Style Rules for Large Desktop Navigation Area*/
     nav li a{
@@ -861,7 +952,20 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form{
         height: 20%;
     }
 
-    /*Style Rules for Large Desktop About Page Classes*/
+    /*Style rules for large desktop viewport for gallery page.*/
+    #gallery-introduction {
+        padding-top: 1em;
+    }
 
+    #gallery-introduction img{
+        width: 45%;
+    }
+
+
+    /*Style Rules for Large Desktop About Page Classes*/
+    .about-me img{
+        width: 30%;
+        height: 30%;
+    }
 
 }
