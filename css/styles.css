@@ -163,8 +163,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     }
 
     .article-preview img {
-        width: 0;
-        height: 0;
+        display: none;
     }
 
     .article-preview h2 {
@@ -179,18 +178,19 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         font-family: "Noto Serif", sans-serif;
         font-size: 1em;
         margin: 1em;
-        -webkit-line-clamp: 4;
+        -webkit-line-clamp: 3;
     }
 
     /*Style rules for article one on mobile view port.*/
     .article-style-one, .article-style-one-resources p {
         font-family: "Noto Serif", sans-serif;
-        font-size: 1.15em;
+        font-size: 1.25em;
         margin: 1.5em;
         line-height: 1.5em;
-        text-align: justify;
-        display: inline-block;
+        display: block;
+        text-align: center;
     }
+
 
     .article-style-one, .article-style-one-resources iframe {
         width: 85%;
@@ -198,8 +198,9 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         display: block;
     }
 
+
     .article-style-one p, .article-style-one-resources {
-        padding: 1.5em;
+        padding: 1em;
     }
 
     .article-style-one h1{
@@ -213,13 +214,21 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         text-align: center;
     }
 
+    .article-style-one-resources {
+        padding-bottom: 1em;
+    }
+
+    .article-style-one-resources p {
+        text-align: center;
+    }
+
     .article-style-one-resources iframe{
         height: 20vh;
         padding: 1em;
     }
 
-    .article-style-one-resources {
-        padding-bottom: 1em;
+    .article-style-one-resources a{
+        color: black;
     }
 
     /*Style Rules for mobile article style 2*/
@@ -457,17 +466,23 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     .citation{
         display: block;
         margin: 0 auto;
-        padding: 2em;
+        padding: 2em 1em;
+    }
+
+    .citation a {
+        color: black;
     }
 
     #credit-introduction p, .citation ol{
         font-family: "Noto Serif", sans-serif;
-        font-size: 1.15em;
+        font-size: 1em;
     }
 
     .citation ol{
         text-align: left;
+        padding-right: 15%;
         line-height: 2em;
+        word-break-wrap: break-word;
     }
 
     #credit-introduction h1, .citation h2{
@@ -594,27 +609,28 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     }
 
     .article-preview {
-        border: 1px solid black;
+        border: 2px solid #86765E;
         margin: 2em auto;
         padding: 0;
     }
 
     .article-preview h2 {
         font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+        padding-top: 0.5em;
     }
 
     .article-preview p {
         font-size: 1em;
         font-family: "Schibsted Grotesk", sans-serif; /*Change*/
-        line-height: 2;
-        -webkit-line-clamp: 5;
+        line-height: 1.5;
+        -webkit-line-clamp: 4;
     }
 
     .article-preview img {
         float: left;
         display: block;
         width: 45%;
-        height: 45%;
+        height: auto;
         margin-right: 1em;
     }
 
@@ -623,11 +639,19 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         font-family: "Schibsted Grotesk", sans-serif; /*Change*/
         font-size: 1.5em;
         line-height: 1.5;
-        margin: 2em;
+        margin: 0 auto;
     }
 
     .article-style-one h1{
         border-top: none;
+    }
+
+    .article-style-one p{
+        text-align: left;
+    }
+
+    .article-style-one img {
+        margin: 0 auto;
     }
 
     .article-style-one-resources iframe{
@@ -790,6 +814,10 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         line-height: 3em;
     }
 
+    .citation a{
+        color: black;
+    }
+
     .citation ol, .citation h2{
         font-family: "Schibsted Grotesk", sans-serif;
         text-align: left;
@@ -857,12 +885,11 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     .article-preview p{
         line-height: 2;
         font-size: 1.5em;
-        -webkit-line-clamp: 8;
+        -webkit-line-clamp: 6;
     }
 
-    .article-preview img{
+    .article-preview img {
         width: 35%;
-        height: 35%;
     }
 
     .article-preview:hover {
@@ -873,12 +900,13 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     /*Style rules for article one page desktop view port.*/
     .article-style-one img {
         float: left;
-        width: 30%;
+        width: 40%;
         padding-right: 2em;
+        padding-top: 1em;
     }
 
     .article-style-one-resources iframe{
-        width: 35%;
+        width: 30%;
         height: 40vh;
         float: left;
         margin: 1em 3em;
@@ -887,9 +915,19 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     .article-style-one-resources p{
         float: right;
         text-align: right;
-        margin: 2em;
+        margin: 1.5em;
+        padding-right: 5%;
         font-size: 1em;
     }
+
+    .article-style-one-resources a{
+        text-decoration: none;
+    }
+
+    .article-style-one-resources a:hover{
+        color: white;
+    }
+
 
     /*Article style two classes for desktop viewport*/
     #desk-article-column {
@@ -970,6 +1008,14 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         padding-left: 20%;
     }
 
+    .citation a{
+        text-decoration: none;
+    }
+
+    .citation a:hover{
+        color: white;
+    }
+
 }
 
 /* Media Query for Large Desktop Viewports */
@@ -1000,13 +1046,9 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
 
     .article-preview p{
         line-height: 2.5;
-        -webkit-line-clamp: 10;
+        -webkit-line-clamp: 8;
     }
 
-    .article-preview img{
-        width: 20%;
-        height: 20%;
-    }
 
     /*Style rules for large desktop viewport for gallery page.*/
     #gallery-introduction {
