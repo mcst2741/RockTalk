@@ -231,6 +231,20 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         color: black;
     }
 
+    /*Style rules for quiz on mobile viewport*/
+    #quiz-question p{
+        cursor: pointer;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #quiz-answer {
+        font-weight: bold;
+        margin: 0 auto;
+        text-align: center;
+        width: 80%;
+        padding: 1em;
+    }
     /*Style Rules for mobile article style 2*/
 
     .article-style-two h1, .article-style-two h4, .article-style-two-resources h3, .article-style-two-resources figcaption {
@@ -483,6 +497,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         padding-right: 15%;
         line-height: 2em;
         word-break-wrap: break-word;
+        overflow: auto;
     }
 
     #credit-introduction h1, .citation h2{
@@ -1047,6 +1062,11 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     .article-preview p{
         line-height: 2.5;
         -webkit-line-clamp: 8;
+    }
+
+    /*Style rules for quiz on article three for desktop viewport*/
+    #quiz-answer {
+        width: 40%;
     }
 
 
