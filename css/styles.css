@@ -1,11 +1,15 @@
+/*
+    Author: Mckenna Steenbock
+*/
+
 /*CSS Reset*/
-body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaption, section{
-    margin: 0;
-    padding: 0;
+    body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaption, section{
+        margin: 0;
+        padding: 0;
 
-}
+    }
 
-    /*Style Rules Across All Viewports*/
+/*Style rules across all viewports.*/
     img, video, iframe {
         max-width: 100%;
         max-height: 100%;
@@ -24,7 +28,39 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         text-overflow: ellipsis;
     }
 
-/* Media Query for Mobile Viewport and Property Cascading*/
+    /*Style rules for the background color across all viewports.*/
+    body {
+        background: linear-gradient(#f4dfcc, #dad6cc);
+        padding-top: 2em;
+    }
+
+/*Style Rules for footer area across all viewports.*/
+    footer {
+        text-align: center;
+        font-size: 1em;
+        background-color: #86765E;
+        width: 100%;
+        height: 15%;
+        overflow: auto;
+    }
+
+    footer a, footer p{
+        font-family: "Parkinsans", sans-serif;
+        text-decoration: none;
+        color: black;
+    }
+
+    footer a:hover {
+        color: white;
+    }
+
+    footer img {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+    }
+
+/* Media query for mobile viewport and property cascading.*/
     .mobile {
         display: block;
         font-family: "RocknRoll One", sans-serif;
@@ -34,7 +70,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         display: none;
     }
 
-    /*Style Rules for Mobile Header and Body Area*/
+    /*Style rules for mobile header and body area across all viewports.*/
     #mobile-h1 {
         display: flex;
         font-size: 1.5em;
@@ -64,13 +100,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         height: auto;
     }
 
-
-    body {
-       background: linear-gradient(#f4dfcc, #dad6cc);
-       padding-top: 2em;
-    }
-
-    /*Style Rules for Mobile Navigation Area*/
+    /*Style Rules for navigation area on mobile viewport.*/
     .mobile-nav {
         background-color: #86765E;
     }
@@ -110,7 +140,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         display: none;
     }
 
-    /*Style Rules for Mobile Homepage Classes*/
+    /*Style rules for home page on mobile viewport.*/
     .home-content {
         font-family: "Noto Serif", sans-serif;
         font-size: 1em;
@@ -135,7 +165,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         color: inherit;
     }
 
-    /*Style Rules for Mobile Article Selection Classes Articles Page Classes*/
+    /*Style rules for article selection page on mobile viewport.*/
     #article-list {
         display: block;
         width: 75%;
@@ -181,7 +211,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         -webkit-line-clamp: 3;
     }
 
-    /*Style rules for article one on mobile view port.*/
+    /*Style rules for article style one on mobile view port.*/
     .article-style-one, .article-style-one-resources p {
         font-family: "Noto Serif", sans-serif;
         font-size: 1.25em;
@@ -191,13 +221,11 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         text-align: center;
     }
 
-
     .article-style-one, .article-style-one-resources iframe {
         width: 85%;
         margin: 0 auto;
         display: block;
     }
-
 
     .article-style-one p, .article-style-one-resources {
         padding: 1em;
@@ -205,6 +233,10 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
 
     .article-style-one h1{
         border-top: 1px solid black;
+    }
+
+    .article-style-one figcaption {
+        font-weight: bold;
     }
 
     .article-style-one h1, .article-style-one-resources h2{
@@ -231,7 +263,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         color: black;
     }
 
-    /*Style rules for quiz on mobile viewport*/
+    /*Style rules for quiz on mobile viewport.*/
     #quiz-question p{
         cursor: pointer;
         text-align: center;
@@ -245,8 +277,8 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         width: 80%;
         padding: 1em;
     }
-    /*Style Rules for mobile article style 2*/
 
+    /*Style rules for article style two on mobile viewport.*/
     .article-style-two h1, .article-style-two h4, .article-style-two-resources h3, .article-style-two-resources figcaption {
         font-family: "RocknRoll One", sans-serif;
         font-weight: bold;
@@ -271,6 +303,10 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         line-height: 2em;
     }
 
+    .article-style-two-resources a{
+        color: black;
+    }
+
     .article-style-two-resources figure {
         width: 75%;
         margin: 0 auto;
@@ -278,10 +314,11 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
 
     .article-style-two-resources figcaption {
         font-weight: 600;
+        padding-top: 1em;
     }
 
 
-    /*Style rules for mobile table in article two style.*/
+    /*Style rules for tables on mobile viewport.*/
     .mobile-table caption {
         font-weight: bold;
         border: 1px solid #615344;
@@ -337,8 +374,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         border-bottom: 1px solid #615344;
     }
 
-/*Style Rules for Mobile Gallery Page*/
-
+    /*Style rules for gallery page on mobile viewport.*/
     #gallery-introduction{
         display: block;
         text-align: center;
@@ -347,11 +383,13 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         font-family: "RocknRoll One", sans-serif;
     }
 
+    #gallery-introduction h1{
+        padding-bottom: 1em;
+    }
+
     #gallery-introduction img{
         max-width: 100%;
         margin: 0 auto;
-        padding-bottom: 1em;
-
         box-shadow: 3px 3px 5px #615344;
     }
 
@@ -375,8 +413,12 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         padding-bottom: 2em;
         font-family: "Noto Serif", sans-serif;
         font-size: 1.25em;
-        border: 3px solid #86765E;
+        border: 1.5px solid #86765E;
         box-shadow: 5px 5px 3px #615344;
+    }
+
+    .gallery-figure figure, .gallery-figure figcaption {
+        border: none;
     }
 
     .gallery-figure img {
@@ -392,10 +434,11 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         border-top: 3px solid #86765E;
     }
 
+    .gallery-figure p {
+        line-height: 1.75;
+    }
 
-
-/*Style Rules for Mobile About Page Classes*/
-
+    /*Style rules for about page on mobile viewport.*/
     .about-me, .contact {
         display: block;
         text-align: center;
@@ -411,14 +454,15 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     .about-me img {
         width: 80%;
         margin: 2em auto;
+        border-radius: 30%;
     }
 
     .contact a{
         text-decoration: none;
-        color: #86765E;
+        color: #605443;
     }
 
-    /*Style Rules For Question Form*/
+    /*Style rules for the question form.*/
     .form-grid {
         display: block;
         gap: 2em;
@@ -469,7 +513,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         justify-self: center;
     }
 
-    /*Style rules for mobile credits page*/
+    /*Style rules for credits page on mobile viewport.*/
     #credit-introduction{
         display: block;
         text-align: center;
@@ -496,39 +540,12 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         text-align: left;
         padding-right: 15%;
         line-height: 2em;
-        word-break-wrap: break-word;
         overflow: auto;
     }
 
     #credit-introduction h1, .citation h2{
         font-family: "RocknRoll One", sans-serif;
         font-weight: bold;
-    }
-
-    /*Style Rules for Footer Area*/
-    footer {
-        text-align: center;
-        font-size: 1em;
-        background-color: #86765E;
-        width: 100%;
-        height: 15%; /*Chose to condense the height of the footer*/
-        overflow: auto;
-    }
-
-    footer a, footer p{
-        font-family: "Schibsted Grotesk", sans-serif;
-        text-decoration: none;
-        color: black;
-    }
-
-    footer a:hover {
-        color: white;
-    }
-
-    footer img {
-        display: inline-block;
-        width: 1em;
-        height: 1em;
     }
 
 /* Media Query for Tablet Viewport */
@@ -541,18 +558,18 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         display: block;
     }
 
-    /*Style Rules for Tablet Header Area*/
+    /*Style rules for header area on tablet viewports and above.*/
     header img {
         width: 100%;
     }
 
-    /*Extra CSS reset needed*/
+    /*Extra CSS reset needed for tablet viewports and above.*/
     body {
         margin: 0;
         padding: 0;
     }
 
-    /*Style Rules for Tablet Navigation Area*/
+    /*Style rules for navigation area on tablet and above viewports.*/
     nav {
         border-top: 1px solid black;
     }
@@ -561,7 +578,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         text-align: center;
         list-style-type: none;
         margin: 0;
-        font-family: "Schibsted Grotesk", sans-serif;
+        font-family: "Parkinsans", sans-serif;
     }
 
     nav li {
@@ -578,7 +595,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         color: black;
     }
 
-    /*Style Rules for Tablet Homepage Class*/
+    /*Style rules for home page on tablet viewports and above.*/
     .home-content {
         font-size: 1.5em;
         display: grid;
@@ -586,11 +603,12 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         column-gap: 2em;
         column-width: 4em;
         padding: 1em 0;
-        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+        font-family: "Schibsted Grotesk", sans-serif;
     }
 
     .welcome-information h1, .extra-information h2 {
-        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+        font-family: "Schibsted Grotesk", sans-serif;
+        padding-bottom: 1em;
     }
 
     .welcome-information {
@@ -616,7 +634,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         break-inside: avoid;
     }
 
-    /*Style Rules for Tablet Articles Page*/
+    /*Style rules for article list page on tablet viewports and above */
     #article-list {
         display: inline-block;
         width: 95%;
@@ -630,13 +648,13 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     }
 
     .article-preview h2 {
-        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+        font-family: "Schibsted Grotesk", sans-serif;
         padding-top: 0.5em;
     }
 
     .article-preview p {
         font-size: 1em;
-        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+        font-family: "Schibsted Grotesk", sans-serif;
         line-height: 1.5;
         -webkit-line-clamp: 4;
     }
@@ -644,14 +662,14 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     .article-preview img {
         float: left;
         display: block;
-        width: 45%;
+        width: 50%;
         height: auto;
         margin-right: 1em;
     }
 
-    /*Style rules for article one for tablet view port*/
+    /*Style rules for article style one on tablet viewports and above*/
     .article-style-one {
-        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+        font-family: "Schibsted Grotesk", sans-serif;
         font-size: 1.5em;
         line-height: 1.5;
         margin: 0 auto;
@@ -665,8 +683,13 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         text-align: left;
     }
 
-    .article-style-one img {
+    .article-style-one img{
         margin: 0 auto;
+    }
+
+    .article-style-one figure {
+        text-align: center;
+        display: block;
     }
 
     .article-style-one-resources iframe{
@@ -674,12 +697,13 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     }
 
     .article-style-one-resources {
-        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+        font-family: "Schibsted Grotesk", sans-serif;
         font-size: 1.25em;
         margin: .5em;
+        overflow: auto;
     }
 
-    /*Style rules for article style two for tablet viewport*/
+    /*Style rules for article style two on tablet viewports and above.*/
     .article-style-two, .article-style-two-resources, .tab-desk-table, .article-style-two h1, .article-style-two h4, .article-style-two-resources h3, .article-style-two-resources figcaption {
         font-family: "Schibsted Grotesk", sans-serif;
     }
@@ -691,6 +715,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     .article-style-two p {
         text-align: left;
         margin-left: 1em;
+        line-height: 1.5;
     }
 
     .article-style-two-resources figure {
@@ -708,7 +733,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         padding: 0 10%;
     }
 
-    /*Style rules for table in article style two for tablet viewport*/
+    /*Style rules for table on tablet viewport and above.*/
     caption {
         font-size: 1.25em;
         font-weight: bold;
@@ -737,7 +762,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         background-color: #86765E70;
     }
 
-    /*Style rules for gallery page in tablet viewport*/
+    /*Style rules for gallery page on tablet viewport and above.*/
     #gallery-introduction{
         width: 70%;
         font-family: "Schibsted Grotesk", sans-serif;
@@ -747,8 +772,6 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     #gallery-introduction img{
         display: block;
         width: 90%;
-        height: auto;
-        margin: 0 auto;
     }
 
     .gallery-grid {
@@ -761,28 +784,42 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         text-align: center;
         margin: 1em auto;
         font-family: "Schibsted Grotesk", sans-serif;
+        border: 3px solid #86765E;
+        box-shadow: 8px 8px 5px #615344;
     }
 
     .gallery-figure img {
         width: 100%;
     }
 
-    /*Style Rules for Tablet Form and About Page Classes*/
+
+    /*Style rules for about page on tablet viewports and above.*/
     .about-me, .contact {
-        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+        font-family: "Schibsted Grotesk", sans-serif;
         padding: 1em 2em;
     }
 
     .about-me h2, .contact h2,  .form-grid h2 {
-        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+        font-family: "Schibsted Grotesk", sans-serif;
     }
 
     .about-me{
-        margin-top: 1.5em;
+        padding-top: 2em;
+        font-size: 1.5em;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .contact {
+        font-size: 1.5em;
+    }
+
+    .about-me img{
+        max-width: 50%;
     }
 
     .form-grid {
-        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+        font-family: "Schibsted Grotesk", sans-serif;
         width: 90%;
     }
 
@@ -797,7 +834,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     }
 
     fieldset legend, fieldset p{
-        font-family: "Schibsted Grotesk", sans-serif; /*Change*/
+        font-family: "Schibsted Grotesk", sans-serif;
         font-weight: bold;
         text-align: center;
         font-size: 1.25em;
@@ -815,7 +852,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         background-color: #86765E;
     }
 
-    /*Style rules for tablet credits page*/
+    /*Style rules for credits page on tablet viewport and above.*/
     #credit-introduction h1, #credit-introduction p{
         font-family: "Schibsted Grotesk", sans-serif;
     }
@@ -845,6 +882,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
 
 /* Media Query for Desktop Viewports */
 @media screen and (min-width: 1000px), print{
+
     .mobile, .mobile-nav, .mobile header{
         display: none;
     }
@@ -852,12 +890,12 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         display: block;
     }
 
-    /*Style Rules for average desktop header image*/
+    /*Style Style rules header on average desktop viewports.*/
     header img {
         height: 65vh;
     }
 
-    /*Style Rules for Average Desktop Navigation Area*/
+    /*Style rules for navigation bar on average desktop viewports.*/
     nav li a {
         padding: .75em 2.25em;
         font-size: 1.5em;
@@ -892,19 +930,20 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         text-decoration: none;
     }
 
-    /*Style Rules for Average Desktop Articles Page*/
+    /*Style rules for article list page on average desktop viewports.*/
     #article-list{
         margin: 2em;
     }
 
     .article-preview p{
         line-height: 2;
-        font-size: 1.5em;
+        font-size: 1.25em;
         -webkit-line-clamp: 6;
     }
 
     .article-preview img {
-        width: 35%;
+        max-width: 35%;
+        height: 100%;
     }
 
     .article-preview:hover {
@@ -912,12 +951,11 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         transform: scale(1.002);
     }
 
-    /*Style rules for article one page desktop view port.*/
-    .article-style-one img {
+    /*Style rules for article style one on average desktop viewports.*/
+    .article-style-one figure {
         float: left;
         width: 40%;
-        padding-right: 2em;
-        padding-top: 1em;
+        padding: 1em 2em 2em 0;
     }
 
     .article-style-one-resources iframe{
@@ -930,8 +968,11 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     .article-style-one-resources p{
         float: right;
         text-align: right;
-        margin: 1.5em;
+        margin: 0 auto;
+        width: 40%;
         padding-right: 5%;
+        padding-left: 2em;
+        padding-top: 1em;
         font-size: 1em;
     }
 
@@ -943,8 +984,7 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         color: white;
     }
 
-
-    /*Article style two classes for desktop viewport*/
+    /*Style rules for article style two on average desktop viewports.*/
     #desk-article-column {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -964,7 +1004,15 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         margin-left: 2em;
     }
 
-    /*Style rules for average desktop image gallery*/
+    .article-style-two-resources a{
+        text-decoration: none;
+    }
+
+    .article-style-two-resources a:hover{
+        color: white;
+    }
+
+    /*Style rules for image gallery page on average desktop viewports.*/
     #gallery-introduction img{
         width: 75%;
     }
@@ -980,9 +1028,9 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         font-family: "Schibsted Grotesk", sans-serif;
     }
 
-    /*Style Rules for Average Desktop About Page Classes*/
+    /*Style rules for about page on average desktop viewports.*/
     .about-me img{
-        max-width: 60%;
+        width: 35%;
     }
 
     .contact a:hover{
@@ -1011,14 +1059,13 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
 
     .form-submit {
         grid-column: 1 / span 3;
-
     }
 
     .form-submit:hover {
         background-color: #CCAC7DFF;
     }
 
-    /*Style rules for average desktop credits page*/
+    /*Style rules for credits page on average desktop viewports.*/
     .citation {
         padding-left: 20%;
     }
@@ -1030,11 +1077,11 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
     .citation a:hover{
         color: white;
     }
-
 }
 
 /* Media Query for Large Desktop Viewports */
 @media screen and (min-width: 1921px), print {
+
     .mobile, .mobile-nav{
         display: none;
     }
@@ -1042,19 +1089,18 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         display: block;
     }
 
-
-    /*Style Rules for Large Desktop Navigation Area*/
+    /*Style rules for navigation bar on large desktop viewports.*/
     nav li a{
         padding: .5em 5em;
         font-size: 1.75em;
     }
 
-    /*Style Rules for Large Desktop Homepage Classes*/
+    /*Style rules for homepage on large desktop viewports.*/
     .welcome-information {
         width: 75%;
     }
 
-    /*Style Rules for Large Desktop Articles Page Classes*/
+    /*Style rules for article list page on large desktop viewports.*/
     .article-preview {
         width: 60%;
     }
@@ -1064,13 +1110,17 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         -webkit-line-clamp: 8;
     }
 
-    /*Style rules for quiz on article three for desktop viewport*/
+    /*Style rules for article style one on large desktop viewports.*/
+    .article-style-one p {
+        line-height: 1.25;
+    }
+
+    /*Style rules for quiz on large desktop viewports.*/
     #quiz-answer {
         width: 40%;
     }
 
-
-    /*Style rules for large desktop viewport for gallery page.*/
+    /*Style rules for image gallery page on large desktop viewports.*/
     #gallery-introduction {
         padding-top: 1em;
     }
@@ -1079,17 +1129,18 @@ body, header, main, nav, img, footer, h1, h2, ul, aside, form, figure, figcaptio
         width: 45%;
     }
 
+    .gallery-figure {
+        width: 65%;
+    }
 
-    /*Style Rules for Large Desktop About Page Classes*/
+    /*Style rules for about page on large desktop viewports.*/
     .about-me img{
         width: 30%;
         height: 30%;
     }
 
-    /*Style rules for large desktop credits page*/
+    /*Style rules for credits page on large desktop viewports.*/
     .citation {
         padding-left: 30%;
     }
-
-
 }

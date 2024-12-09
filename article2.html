@@ -1,11 +1,13 @@
+<!--Author: Mckenna Steenbock-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Rock Talk: Mountain Digest</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn about different types of convergent mountains.">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Notable&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=RocknRoll+One&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=RocknRoll+One&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/stone-favicon-shortcut.png" type="image/png">
     <link rel="icon" href="images/stone-favicon-32.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="images/stone-favicon-apple.png" type="image/png" sizes="180x180">
@@ -14,16 +16,20 @@
 
 <body>
 <div id="wrapper">
-    <header >
+    <header>
+        <!--Header div for all viewports excluding mobile.-->
         <div class="tab-desk">
             <a href="index.html"><img src="images/hero-banner.jpg" alt="image of red rocks colorado"></a>
         </div>
 
+        <!--Header div for mobile viewport.-->
         <div class="mobile">
             <h1 id="mobile-h1"><img src="images/rocktalk-mobile-left.png" alt="Rock Icon" class="mobile-icon"> Rock Talk <img src="images/rocktalk-mobile-right.png" alt="Rock Icon" class="mobile-icon"></h1>
             <h4 id="mobile-h4">Uncover geology one layer at a time!</h4>
         </div>
     </header>
+
+    <!--Navigation bar for mobile viewport.-->
     <nav class="mobile-nav">
         <div id="nav-links-mobile">
             <a href="index.html">Home</a>
@@ -38,6 +44,7 @@
         </a>
     </nav>
 
+    <!--Navigation bar for all other viewports.-->
     <nav class="tab-desk">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -50,6 +57,7 @@
 
     <main>
         <article id="desk-article-column">
+            <!--Article two content.-->
             <section class="article-style-two">
                 <h1>Volcanoes and Collisional Mountains</h1>
                 <h4>The folds, faults, and everything in-between</h4>
@@ -134,87 +142,89 @@
                 </p>
             </section>
 
+            <!--Article two images and additional resources.-->
             <section class="article-style-two-resources">
                 <figure>
-                    <img src="images/gettyimages-1345729945-170667a.jpg" alt="fix later">
+                    <img src="images/mount-rainier.jpg" alt="An image of Mount Rainier.">
                     <figcaption>
-                        This is a photo of a volcanic mountain
+                        This is a photo by Peter Hulce<sup>1</sup> of Mount Rainier, an active volcanic mountain in Washington.
                     </figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/gettyimages-1345729945-170667a.jpg" alt="fix later">
+                    <img src="images/cont-cont-convergence.jpg" alt="Graphic of continent-continental convergence.">
                     <figcaption>
-                        This is a photo of a collisional mountain
+                        This is an illustration of continent-continental convergence courtesy of the United States Geological Survey<sup>2</sup>.
                     </figcaption>
                 </figure>
 
                 <aside>
                     <h3>Interested in learning more? Check out these resources below</h3>
                     <ul>
-                        <li>Resource gesGesgseg</li>
-                        <li>Resource j6tt6skjytg</li>
-                        <li>Resource wegEGesjh5rtw4jk6</li>
+                        <li>Learn more about other volcanoes from the <a href="https://www.nps.gov/subjects/volcanoes/anatomy-of-a-volcano.htm" target="_blank">National Park Service</a>.</li>
+                        <li> You can also learn more about plate boundaries from the <a href="https://www.nps.gov/subjects/geology/plate-tectonics-types-of-plate-boundaries.htm" target="_blank">National Park Service</a> as well.</li>
                     </ul>
                 </aside>
-
             </section>
         </article>
 
+            <!--Article two tables.-->
             <section>
+                <!--Table for the mobile viewport.-->
                 <div class="mobile-table">
                     <table>
                         <caption>Collisional Versus Volcanic Mountains</caption>
                         <thead>
                         <tr>
+                            <th>Defining Features</th>
                             <th>Collisional</th>
                             <th>Volcanic</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <th colspan="2">Type of Tectonic Activity</th>
+                            <th>Type of Tectonic Activity</th>
                             <td>Collision</td>
                             <td>Subduction</td>
                         </tr>
 
                         <tr>
-                            <th colspan="2">Plates Involved</th>
+                            <th>Plates Involved</th>
                             <td>Only continental</td>
                             <td>Oceanic and continental or just oceanic</td>
                         </tr>
 
                         <tr>
-                            <th colspan="2">Does it produce magma</th>
+                            <th>Does it produce magma</th>
                             <td>No</td>
                             <td>Yes</td>
                         </tr>
                         <tr>
-                            <th colspan="2">Does it produce earthquakes</th>
+                            <th>Does it produce earthquakes</th>
                             <td>Yes</td>
                             <td>Yes </td>
                         </tr>
 
                         <tr>
-                            <th colspan="2">Most common mass wasting event</th>
+                            <th>Most common mass wasting event</th>
                             <td>Rockslides and landslides</td>
                             <td>Lahars</td>
                         </tr>
 
                         <tr>
-                            <th colspan="2">How is it considered active</th>
+                            <th>How is it considered active</th>
                             <td>If it is still near an active plate boundary and growing taller</td>
                             <td>The last time it erupted in written history </td>
                         </tr>
 
                         <tr>
-                            <th colspan="2">Type of metamorphism that occurs there</th>
+                            <th>Type of metamorphism that occurs there</th>
                             <td>Regional (high pressure, lower temperature)</td>
                             <td>Contact (high temperature, lower pressure)</td>
                         </tr>
 
                         <tr>
-                            <th colspan="2">Substantial benefit for humans</th>
+                            <th>Substantial benefit for humans</th>
                             <td>Fresh water</td>
                             <td>Fertile soil</td>
                         </tr>
@@ -223,6 +233,7 @@
                 </div>
 
                 <div class="tab-desk-table">
+                    <!--Table for all other viewports.-->
                     <table>
                         <caption>Collisional Mountains Versus Volcanic Mountains</caption>
                         <thead>
@@ -234,58 +245,58 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <th colspan="2">Type of Tectonic Activity</th>
+                            <td colspan="2">Type of Tectonic Activity</td>
                             <td>Collision</td>
                             <td>Subduction</td>
                         </tr>
 
                         <tr>
-                            <th colspan="2">Plates Involved</th>
+                            <td colspan="2">Plates Involved</td>
                             <td>Only continental</td>
                             <td>Oceanic and continental or just oceanic</td>
                         </tr>
 
                         <tr>
-                            <th colspan="2">Does it produce magma</th>
+                            <td colspan="2">Does it produce magma</td>
                             <td>No</td>
                             <td>Yes</td>
                         </tr>
                         <tr>
-                            <th colspan="2">Does it produce earthquakes</th>
+                            <td colspan="2">Does it produce earthquakes</td>
                             <td>Yes</td>
                             <td>Yes </td>
                         </tr>
 
                         <tr>
-                            <th colspan="2">Most common mass wasting event</th>
+                            <td colspan="2">Most common mass wasting event</td>
                             <td>Rockslides and landslides</td>
                             <td>Lahars</td>
                         </tr>
 
                         <tr>
-                            <th colspan="2">How is it considered active</th>
+                            <td colspan="2">How is it considered active</td>
                             <td>If it is still near an active plate boundary and growing taller</td>
                             <td>The last time it erupted in written history </td>
                         </tr>
 
                         <tr>
-                            <th colspan="2">Type of metamorphism that occurs there</th>
+                            <td colspan="2">Type of metamorphism that occurs there</td>
                             <td>Regional (high pressure, lower temperature)</td>
                             <td>Contact (high temperature, lower pressure)</td>
                         </tr>
 
                         <tr>
-                            <th colspan="2">Substantial benefit for humans</th>
+                            <td colspan="2">Substantial benefit for humans</td>
                             <td>Fresh water</td>
                             <td>Fertile soil</td>
                         </tr>
-
                         </tbody>
                     </table>
                 </div>
             </section>
     </main>
 
+    <!--Footer across all viewports.-->
     <footer>
         <p>Website By: <a href="mailto:msteenbock@student.cccs.edu">Mckenna Steenbock</a></p>
         <a href="https://pages.github.com/" target="_blank"><img src="images/github-mark-white.png" alt="GitHub Logo"> Hosted on GitHub Pages </a>
